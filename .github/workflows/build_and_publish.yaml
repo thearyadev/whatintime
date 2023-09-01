@@ -21,8 +21,7 @@ jobs:
             
             - name: Build
               run: |
-                poetry install --with dev
-                python setup.py sdist bdist_wheel
+                poetry build
 
             - name: Publish to PyPI
               uses: pypa/gh-action-pypi-publish@release/v1
