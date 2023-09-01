@@ -32,7 +32,7 @@ def whatintime(time_format: TimeFormat = TimeFormat.NS) -> Callable:
             ret = func(*args, **kwargs)
             end = time.monotonic_ns()
             print(
-                f"Function {func.__name__} took {time_format(start-end)}{time_format.name}"
+                f"Function {func.__name__} took {time_format(end-start)}{time_format.name}"
             )
             return ret
 
