@@ -1,3 +1,5 @@
+![Tests](https://github.com/thearyadev/whatintime/actions/workflows/pytest.yaml/badge.svg)
+
 # whatintime
 Simple package for timing a python function.
 
