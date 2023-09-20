@@ -62,11 +62,11 @@ def test_timer_args_kwargs():
 @pytest.mark.parametrize(
     "ns, target, expected",
     [
-        (300, whatintime.TimeFormat.S, 0.0003),
-        (300, whatintime.TimeFormat.M, 0.000005),
-        (300, whatintime.TimeFormat.H, 0.00000008333333333333333),
+        (300, whatintime.TimeFormat.S, 3e-07),
+        (300, whatintime.TimeFormat.M, 5e-09),
+        (300, whatintime.TimeFormat.H, 8.333333333333e-11),
         (300, whatintime.TimeFormat.NS, 300),
-        (300, whatintime.TimeFormat.MS, 0.3),
+        (300, whatintime.TimeFormat.MS, 0.0003),
     ],
 )
 def test_time_format(ns, target, expected):

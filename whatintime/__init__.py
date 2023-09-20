@@ -15,13 +15,13 @@ class TimeFormat(Enum):
         if self == TimeFormat.NS:
             return ns
         elif self == TimeFormat.MS:
-            return ns / 1000
+            return ns / 1_000_000
         elif self == TimeFormat.S:
-            return ns / 1000 / 1000
+            return ns / 1_000_000_000
         elif self == TimeFormat.M:
-            return ns / 1000 / 1000 / 60
+            return ns / 1_000_000_000 / 60
         elif self == TimeFormat.H:
-            return ns / 1000 / 1000 / 60 / 60
+            return ns / 1_000_000_000 / 60 / 60
 
 
 def whatintime(time_format: TimeFormat = TimeFormat.NS) -> Callable:
